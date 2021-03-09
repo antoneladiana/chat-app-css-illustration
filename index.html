@@ -1,51 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+  <!-- Title -->
+  <link rel="icon" type="image/png" sizes="32x32" 
+        href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Chat App CSS Illustration</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
+
 <body>
+  <main>
 
-  Samuel Green
-  Available to Walk
+<!-- ====================================================================== 
+     PHONE ILLUSTRATION
+======================================================================= -->
+    <article class="illustration">
 
-  That sounds great. I’d be happy with that.
+      <!-- ILLUSTRATION TOP: PROFILE -->
+      <div class="profile">
+        <!-- Decoration -->
+        <div class="profile__decoration"></div>
+        <div class="profile__content">
+          <!-- Go-back arrow icon -->
+          <svg class="profile__icon" viewBox="0 0 320 512">
+            <use xlink:href="./images/svg-sprite.svg#icon-chevron-left"/>
+          </svg>
+          <!-- Profile info -->
+          <div class="profile__info">
+            <!-- Profile picture -->
+            <img class="profile__avatar" src="./images/avatar.jpg" 
+                  alt="Samuel Green's profile picture.">
+            <!-- Profile name -->
+            <span class="profile__name">Samuel Green</span>
+            <!-- Profile statur -->
+            <span class="profile__status">Available to Walk</span>
+          </div>
+          <!-- Menu icon -->
+          <svg class="profile__icon" viewBox="0 0 192 512">
+            <use xlink:href="./images/svg-sprite.svg#icon-ellipsis"/>
+          </svg>
+        </div>
+      </div>
 
-  Could you send over some pictures of your dog, please?
+      <!-- ILLUSTRATION BOTTOM: CHAT -->
+      <div class="chat">
+        <!-- Received message -->
+        <div class="chat__message --received">
+          <p class="chat__text --received">
+            That sounds great. I’d be happy with that.
+          </p>
+        </div>
+        <!-- Received message -->
+        <div class="chat__message --received">
+          <p class="chat__text --received">
+            Could you send over some pictures of your dog, please?
+          </p>
+        </div>
+        <!-- Sent images -->
+        <div class="chat__images">
+          <img class="chat__image" src="./images/dog-image-1.jpg" 
+               alt="Dog's smiley face.">
+          <img class="chat__image" src="./images/dog-image-2.jpg" 
+               alt="Dog sitting in the sand.">
+          <img class="chat__image" src="./images/dog-image-3.jpg" 
+               alt="Dog carrying tree branch.">
+        </div>
+        <!-- Sent message -->
+        <div class="chat__message --sent">
+          <p class="chat__text --sent">
+            Here are a few pictures. She’s a happy girl!
+          </p>
+        </div>
+        <!-- Sent message -->
+        <div class="chat__message --sent">
+          <p class="chat__text --sent">
+            Can you make it?
+          </p>
+        </div>
+        <!-- Received message -->
+        <div class="chat__message --received">
+          <p class="chat__text --received">
+            She looks so happy! The time we discussed works. How long shall 
+            I take her out for?
+          </p>
+        </div>
+        <!-- Received form for walking time and price options -->
+        <ul class="form">
+          <li class="chat__message --received form__option">
+            <div class="form__radio"></div>
+            <span class="chat__text form__time">30 minute walk</span>
+            <span class="form__price">$29</span>
+          </li>
+          <li class="chat__message --received form__option">
+            <div class="form__radio"></div>
+            <span class="chat__text form__time">1 hour walk</span>
+            <span class="form__price">$49</span>
+          </li>
+        </ul>
+        <!-- Chat box -->
+        <div class="chat-box">
+          <span class="chat-box__text">Type a message…</span>
+          <div class="chat-box__button">
+            <svg class="chat-box__icon" viewBox="0 0 320 512">
+              <use xlink:href="./images/svg-sprite.svg#icon-chevron-right"/>
+            </svg>
+          </div>
+          </div>
 
-  Here are a few pictures. She’s a happy girl!
+        </div>  
+      </div>
+    </article>
 
-  Can you make it?
 
-  She looks so happy! The time we discussed works. How long shall I take her out for?
+<!-- ====================================================================== 
+     INTRODUCTION
+======================================================================= -->
+    <div class="intro">
+      <!-- Service title -->
+      <h1 class="intro__title">Simple booking</h1>
+      <!-- Service description -->
+      <p class="intro__description">
+        Stay in touch with our dog walkers through the chat interface. This 
+        makes it easy to discuss arrangements and make bookings. Once the 
+        walk has been completed you can rate your walker and book again all 
+        through the chat.
+      </p>
+    </div>
+  </main>
 
-  30 minute walk
-  $29
 
-  1 hour walk
-  $49
+<!-- ====================================================================== 
+     FOOTER
+======================================================================= -->
+  <footer>
+    <!-- Attribution -->
+    <p class="attribution">
+      Challenge by 
+      <a class="attribution__link"
+         href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+        Frontend Mentor</a>. 
+      Coded by 
+      <a class="attribution__link" 
+         href="https://antoneladiana.github.io/" target="_blank">
+        Antonela Diana</a>.
+    </p>
+  </footer>
 
-  Type a message…
-
-  Simple booking
-
-  Stay in touch with our dog walkers through the chat interface. This makes it easy to 
-  discuss arrangements and make bookings. Once the walk has been completed you can rate 
-  your walker and book again all through the chat.
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
 </body>
 </html>
+
+
+
